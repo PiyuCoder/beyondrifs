@@ -5,15 +5,20 @@ import manWithGuitar from "../../assets/images/image84.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import StarryBackground from "../StarryBackground";
+import { useNavigate } from "react-router-dom";
 
 const data = [
   {
     image: manWithGuitar,
     heading: "Unlock your Musical Journey",
     content:
-      "We offer expert online courses in musical instruments for beginners and seasonal musicians. Join our community and discover the magic of music.",
+      "At Beyondriffs, we believe music speaks to the soul. Whether you're just starting out or striving to master your musical skills, we provide a life-changing learning journey. Join us now and discover your musical voice at Beyondriffs!",
     buttons: [
-      { text: "Book free trial", url: "#", style: "solid" },
+      {
+        text: "Book free trial",
+        url: "/book-demo/choose-role",
+        style: "solid",
+      },
       { text: "Teach with us", url: "#", style: "transparent" },
     ],
   },
@@ -28,6 +33,7 @@ const data = [
 ];
 
 export default function HeroSection() {
+  const navigate = useNavigate();
   const settings = {
     dots: true,
     infinite: true,
@@ -59,6 +65,7 @@ export default function HeroSection() {
                 <div className="flex items-center justify-start flex-wrap gap-5 w-full mt-7">
                   {el.buttons.map((btn, btnIndex) => (
                     <button
+                      onClick={() => navigate(btn.url)}
                       key={btnIndex}
                       className={`${
                         btn.style === "solid"

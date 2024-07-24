@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const items = [
   {
@@ -27,9 +28,12 @@ export default function StartLearning() {
           <h3 className="text-lg lg:text-xl text-center mt-2 lg:mt-5">
             In 3 Simple steps
           </h3>
-          <button className="bg-gradient-to-r from-custom-purple-1 via-custom-purple-2 to-custom-purple-3 text-white py-4 text-lg opacity-80 mt-7 px-10 rounded-2xl hover:opacity-80">
+          <Link
+            to={"/book-demo/choose-role"}
+            className="bg-gradient-to-r from-custom-purple-1 via-custom-purple-2 to-custom-purple-3 text-white py-4 text-lg opacity-80 mt-7 px-10 rounded-2xl hover:opacity-80"
+          >
             Book free trial
-          </button>
+          </Link>
         </div>
         <div className="flex flex-wrap sm:flex-nowrap items-baseline justify-center flex-row mt-10 gap-3">
           {items.map((item, index) => (

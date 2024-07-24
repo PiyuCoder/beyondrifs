@@ -91,7 +91,7 @@ export default function NavBar({ bgColor }) {
                           className="relative text-white hover:text-gray-300 hover:bg-[#510779] hover:rounded-xl"
                         >
                           <Link
-                            to={option.link}
+                            to={!option.subOptions && option.link}
                             className="flex gap-4 px-8 py-2  "
                           >
                             <div>
@@ -151,9 +151,12 @@ export default function NavBar({ bgColor }) {
             >
               Login
             </Link>
-            <button className="bg-gradient-to-r hidden md:block from-custom-purple-1 via-custom-purple-2 to-custom-purple-3 text-white py-2 px-3 text-xs md:text-sm xl:py-3 xl:px-7 xl:text-xl rounded-2xl hover:opacity-80">
+            <Link
+              to={"/book-demo/choose-role"}
+              className="bg-gradient-to-r hidden md:block from-custom-purple-1 via-custom-purple-2 to-custom-purple-3 text-white py-2 px-3 text-xs md:text-sm xl:py-3 xl:px-7 xl:text-xl rounded-2xl hover:opacity-80"
+            >
               Book free trial
-            </button>
+            </Link>
             <CiMenuBurger
               onClick={toggleSidebar}
               className=" inline-block lg:hidden mx-3 text-white hover:text-purple-600"

@@ -23,7 +23,10 @@ export default function Courses() {
       <NavBar bgColor={"blak"} />
       <TopSection course={course} />
       <TrialDemo />
-      <Overview overviewImg={course.overviewImg} />
+      <Overview
+        overviewImg={course.overviewImg}
+        overviewContent={course.overviewContent}
+      />
       <Highlights />
       <Curriculum name={course.name} />
       <Carousel3D />

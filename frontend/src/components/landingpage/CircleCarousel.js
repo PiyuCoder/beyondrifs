@@ -10,16 +10,66 @@ import { IoArrowBackSharp } from "react-icons/io5";
 
 // Images
 const images = [
-  { image: acoustic, name: "Ukulele" },
-  { image: vocal, name: "Vocals" },
-  { image: piano, name: "Piano" },
-  { image: recording, name: "Music Production" },
-  { image: eGuitar, name: "Guitar" },
-  { image: acoustic, name: "Ukulele" },
-  { image: vocal, name: "Vocals" },
-  { image: piano, name: "Piano" },
-  { image: recording, name: "Music Production" },
-  { image: eGuitar, name: "Guitar" },
+  {
+    image: acoustic,
+    name: "Ukulele",
+    content:
+      "There is something about ukulele that just makes you smile. It makes you let your guard down. It brings out the child in all of us. So, why are you waiting? Learn from our esteemed instructors and discover the joy of creating beautiful music, fostering smiles and shared experiences for you and your loved ones.",
+  },
+  {
+    image: vocal,
+    name: "Vocals",
+    content:
+      "Whether you're passionate about singing or dream of becoming a vocal star, our certified music instructors are here to support you. Our courses are designed in a way that builds a strong foundation with essential techniques such as breathing and pitch control and then advance to more complex vocal skills. Our courses are tailored to suit each student's individual needs and abilities.",
+  },
+  {
+    image: piano,
+    name: "Keyboard",
+    content:
+      "Are you on the path to becoming a keyboard expert? Beyondriffs is here to assist you with fundamental skills such as scales and finger techniques, then advance to more challenging pieces. Our certified tutors will ensure your musical journey is both enriching and melodious.",
+  },
+  {
+    image: recording,
+    name: "Music Production",
+    content:
+      "Do you get curious about how music comes to life? or do you dream of becoming a top music producer? Stop at nothing to turn your passion into reality. Beyondriffs empowers aspiring producers like you. We'll guide you from the ground up, mastering software navigation and beat-making before diving into advanced techniques. Hone your skills and prepare to share your unique sound with the world.",
+  },
+  {
+    image: eGuitar,
+    name: "Guitar",
+    content:
+      "Whether you're dedicated to your musical practice or dreaming of rock stardom, our fellow mates in the musical world are here to support you. We start with basics like scales and chords, then progress steadily toward advanced levels. Our certified courses are tailored to meet each student's unique needs and abilities, ensuring a perfect match.",
+  },
+  {
+    image: acoustic,
+    name: "Ukulele",
+    content:
+      "There is something about ukulele that just makes you smile. It makes you let your guard down. It brings out the child in all of us. So, why are you waiting? Learn from our esteemed instructors and discover the joy of creating beautiful music, fostering smiles and shared experiences for you and your loved ones.",
+  },
+  {
+    image: vocal,
+    name: "Vocals",
+    content:
+      "Whether you're passionate about singing or dream of becoming a vocal star, our certified music instructors are here to support you. Our courses are designed in a way that builds a strong foundation with essential techniques such as breathing and pitch control and then advance to more complex vocal skills. Our courses are tailored to suit each student's individual needs and abilities.",
+  },
+  {
+    image: piano,
+    name: "Keyboard",
+    content:
+      "Are you on the path to becoming a keyboard expert? Beyondriffs is here to assist you with fundamental skills such as scales and finger techniques, then advance to more challenging pieces. Our certified tutors will ensure your musical journey is both enriching and melodious.",
+  },
+  {
+    image: recording,
+    name: "Music Production",
+    content:
+      "Do you get curious about how music comes to life? or do you dream of becoming a top music producer? Stop at nothing to turn your passion into reality. Beyondriffs empowers aspiring producers like you. We'll guide you from the ground up, mastering software navigation and beat-making before diving into advanced techniques. Hone your skills and prepare to share your unique sound with the world.",
+  },
+  {
+    image: eGuitar,
+    name: "Guitar",
+    content:
+      "Whether you're dedicated to your musical practice or dreaming of rock stardom, our fellow mates in the musical world are here to support you. We start with basics like scales and chords, then progress steadily toward advanced levels. Our certified courses are tailored to meet each student's unique needs and abilities, ensuring a perfect match.",
+  },
 ];
 
 const CircleCarousel = () => {
@@ -71,10 +121,7 @@ const CircleCarousel = () => {
               {images[currentIndex].name}
             </h1>
             <p className="font-thin tracking-wide text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              {images[currentIndex].content}
             </p>
             <div className="flex items-center justify-between lg:mt-20">
               <button

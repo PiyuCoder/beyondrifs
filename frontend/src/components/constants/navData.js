@@ -8,14 +8,14 @@ export const navigationLinks = [
     label: "Courses",
     link: "/about",
     options: [
-      {
-        label: "Vocals",
-        link: "/courses/vocals",
-        // subOptions: [
-        //   { label: "Overview", link: "/about/company/overview" },
-        //   { label: "Team", link: "/about/company/team" },
-        // ],
-      },
+      // {
+      //   label: "Vocals",
+      //   link: "/courses/vocals",
+      //   // subOptions: [
+      //   //   { label: "Overview", link: "/about/company/overview" },
+      //   //   { label: "Team", link: "/about/company/team" },
+      //   // ],
+      // },
       {
         label: "Instruments",
         link: "/courses/instruments",
@@ -29,50 +29,47 @@ export const navigationLinks = [
           },
         ],
       },
-      {
-        label: "Certificate",
-        link: "/certificate",
-        subOptions: [
-          { label: "Trinity", link: "/certificate/trinity" },
-          { label: "RSL", link: "/certificate/rsl" },
-        ],
-      },
+      // {
+      //   label: "Certificate",
+      //   link: "/certificate",
+      //   subOptions: [
+      //     { label: "Trinity", link: "/certificate/trinity" },
+      //     { label: "RSL", link: "/certificate/rsl" },
+      //   ],
+      // },
     ],
   },
-  {
-    label: "Certificate",
-    link: "/certificate",
-    options: [
-      {
-        label: "Trinity",
-        link: "/certificate/trinity",
-        // subOptions: [
-        //   { label: "Web", link: "/services/development/web" },
-        //   { label: "Mobile", link: "/services/development/mobile" },
-        // ],
-      },
-      {
-        label: "RSL",
-        link: "/certificate/rsl",
-        // subOptions: [
-        //   { label: "UI/UX", link: "/services/design/ui-ux" },
-        //   { label: "Graphic", link: "/services/design/graphic" },
-        // ],
-      },
-    ],
-  },
+  // {
+  //   label: "Certificate",
+  //   link: "/certificate",
+  //   options: [
+  //     {
+  //       label: "Trinity",
+  //       link: "/certificate/trinity",
+  //       // subOptions: [
+  //       //   { label: "Web", link: "/services/development/web" },
+  //       //   { label: "Mobile", link: "/services/development/mobile" },
+  //       // ],
+  //     },
+  //     {
+  //       label: "RSL",
+  //       link: "/certificate/rsl",
+  //       // subOptions: [
+  //       //   { label: "UI/UX", link: "/services/design/ui-ux" },
+  //       //   { label: "Graphic", link: "/services/design/graphic" },
+  //       // ],
+  //     },
+  //   ],
+  // },
   {
     label: "Programs",
     link: "/programs",
     options: [
-      {
-        label: "School Program",
-        link: "/programs/school",
-        // subOptions: [
-        //   { label: "Web", link: "/services/development/web" },
-        //   { label: "Mobile", link: "/services/development/mobile" },
-        // ],
-      },
+      // {
+      //   label: "School Program",
+      //   link: "/programs/school",
+
+      // },
       {
         label: "Corporate Program",
         link: "/programs/corporate/concert",
@@ -128,57 +125,57 @@ export const navigationLinks = [
         // ],
       },
     ],
-  },
-  {
-    label: "Support",
-    link: "/support",
-    options: [
-      {
-        label: "Contact Us",
-        link: "/support/contact",
-        // subOptions: [
-        //   { label: "Web", link: "/services/development/web" },
-        //   { label: "Mobile", link: "/services/development/mobile" },
-        // ],
-      },
-      {
-        label: "FAQs",
-        link: "/support/faqs",
-        // subOptions: [
-        //   { label: "UI/UX", link: "/services/design/ui-ux" },
-        //   { label: "Graphic", link: "/services/design/graphic" },
-        // ],
-      },
-    ],
-  },
-  {
-    label: "Hiring",
-    link: "/hiring",
-    options: [
-      {
-        label: "Music Teacher",
-        link: "/hiring/teacher",
-        // subOptions: [
-        //   { label: "Web", link: "/services/development/web" },
-        //   { label: "Mobile", link: "/services/development/mobile" },
-        // ],
-      },
-      {
-        label: "Business Developers",
-        link: "/hiring/bd",
-        // subOptions: [
-        //   { label: "UI/UX", link: "/services/design/ui-ux" },
-        //   { label: "Graphic", link: "/services/design/graphic" },
-        // ],
-      },
-      {
-        label: "Interns",
-        link: "/hiring/interns",
-        // subOptions: [
-        //   { label: "UI/UX", link: "/services/design/ui-ux" },
-        //   { label: "Graphic", link: "/services/design/graphic" },
-        // ],
-      },
-    ],
+    // },
+    // {
+    //   label: "Support",
+    //   link: "/support",
+    //   options: [
+    //     {
+    //       label: "Contact Us",
+    //       link: "/support/contact",
+    //       // subOptions: [
+    //       //   { label: "Web", link: "/services/development/web" },
+    //       //   { label: "Mobile", link: "/services/development/mobile" },
+    //       // ],
+    //     },
+    //     {
+    //       label: "FAQs",
+    //       link: "/support/faqs",
+    //       // subOptions: [
+    //       //   { label: "UI/UX", link: "/services/design/ui-ux" },
+    //       //   { label: "Graphic", link: "/services/design/graphic" },
+    //       // ],
+    //     },
+    //   ],
+    // },
+    // {
+    //   label: "Hiring",
+    //   link: "/hiring",
+    //   options: [
+    //     {
+    //       label: "Music Teacher",
+    //       link: "/hiring/teacher",
+    //       // subOptions: [
+    //       //   { label: "Web", link: "/services/development/web" },
+    //       //   { label: "Mobile", link: "/services/development/mobile" },
+    //       // ],
+    //     },
+    //     {
+    //       label: "Business Developers",
+    //       link: "/hiring/bd",
+    //       // subOptions: [
+    //       //   { label: "UI/UX", link: "/services/design/ui-ux" },
+    //       //   { label: "Graphic", link: "/services/design/graphic" },
+    //       // ],
+    //     },
+    //     {
+    //       label: "Interns",
+    //       link: "/hiring/interns",
+    //       // subOptions: [
+    //       //   { label: "UI/UX", link: "/services/design/ui-ux" },
+    //       //   { label: "Graphic", link: "/services/design/graphic" },
+    //       // ],
+    //     },
+    //   ],
   },
 ];

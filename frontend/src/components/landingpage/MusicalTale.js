@@ -77,11 +77,11 @@ export default function MusicalTale() {
           </span>
         </h1>
         <p className="text-lg leading-relaxed font-thin">
-          Beyondriffs is more than an online music school; it’s a vibrant
-          community where creativity thrives. Our team of expert instructors
-          brings decades of experience, guiding you through melodies, harmonies,
-          and rhythm. We’re not just teachers; we’re fellow travelers on this
-          melodic journey.
+          Beyondriffs goes beyond music lessons; it's about discovering your
+          voice through rhythm. We foster emotional expression, not just playing
+          notes. Say goodbye to conventional teachers - we connect you with
+          fellow music explorers and mentors who will help you become a musical
+          virtuoso.
         </p>
         <button className="bg-gradient-to-r from-custom-purple-1 via-custom-purple-2 to-custom-purple-3 text-white py-4 text-lg opacity-55 mt-5  px-10 rounded-2xl hover:opacity-80">
           Explore our story

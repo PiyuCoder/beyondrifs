@@ -15,9 +15,12 @@ export default function Explore() {
           Turn your Passion into Reality <br />
           <span className=" font-medium"> Let's Begin</span>
         </h1>
-        <button className="bg-gradient-to-r from-custom-purple-1 via-custom-purple-2 to-custom-purple-3 text-white py-4 text-lg opacity-80 mt-5  px-10 rounded-2xl hover:opacity-80">
+        <Link
+          to={"/book-demo/choose-role"}
+          className="bg-gradient-to-r from-custom-purple-1 via-custom-purple-2 to-custom-purple-3 text-white py-4 text-lg opacity-80 mt-5  px-10 rounded-2xl hover:opacity-80"
+        >
           Book free trial
-        </button>
+        </Link>
 
         <div className=" flex flex-wrap lg:flex-nowrap text-start px-4 md:px-10 mt-28 gap-20 mb-20">
           <div>

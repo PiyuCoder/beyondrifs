@@ -279,15 +279,13 @@ html {
   background-image: url("./assets/images/collaborate-bg.jpeg");
 }
 
-.bg-indiBlog{
+.bg-indiBlog {
   background-image: url("./assets/images/IndiBlogbg.jpg");
 }
 
-.bg-indi-content{
-  background: linear-gradient(179.87deg, #530875 0.11%, #08010B 115.56%);
-
+.bg-indi-content {
+  background: linear-gradient(179.87deg, #530875 0.11%, #08010b 115.56%);
 }
-
 
 .bg-collab-associate {
   background-image: url("./assets/images/collab-guitar-bg.png");
@@ -298,6 +296,24 @@ html {
 }
 .bg-corporate-workshop {
   background-image: url("./assets/images/workshop-program-hero.png");
+}
+
+.bg-gigs {
+  background-image: url("./assets/images/gigs-img1.png");
+}
+.bg-gigs-gardient {
+  background: linear-gradient(
+    90deg,
+    rgba(19, 1, 25, 0.6) 50%,
+    rgba(82, 1, 109, 0.6) 100%
+  );
+}
+.bg-custom-gradient-gigs-btn {
+  background: linear-gradient(
+    90deg,
+    rgba(85, 85, 85, 0.3) 0%,
+    rgba(177, 152, 191, 0.3) 100%
+  );
 }
 
 .custom-slider .slick-slide {

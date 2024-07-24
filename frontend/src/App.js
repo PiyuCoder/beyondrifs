@@ -25,6 +25,14 @@ import AboutUs from "./pages/about/AboutUs";
 import Collaborate from "./pages/about/Collaborate";
 import IndividualBlog from "./pages/about/IndividualBlog";
 import Corporate from "./pages/program/Corporate";
+import Gigs from "./pages/program/Gigs";
+import School from "./pages/program/School";
+import Blog from "./pages/about/Blog";
+import BookDemo from "./layout/BookDemo";
+import ChooseRole from "./pages/bookDemo/ChooseRole";
+import ChooseTime from "./pages/bookDemo/ChooseTime";
+import ContactDetails from "./pages/bookDemo/ContactDetails";
+import DemoContextProvider from "./context/demoContext";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -36,19 +44,31 @@ const router = createBrowserRouter(
       <Route path="user-dashboard" element={<UserDashboard />} />
       <Route path="about/aboutUs" element={<AboutUs />} />
       <Route path="about/collaborations" element={<Collaborate />} />
+      <Route path="about/blogs" element={<Blog />} />
       <Route path="about/individualblog" element={<IndividualBlog />} />
+      <Route path="book-demo" element={<BookDemo />}>
+        <Route path="choose-role" element={<ChooseRole />} />
+        <Route path="choose-time" element={<ChooseTime />} />
+        <Route path="contact-details" element={<ContactDetails />} />
+      </Route>
       <Route element={<CourseLayout />}>
         <Route path="/courses/instruments/:courseName" element={<Courses />} />
         <Route path="/courses/vocals" element={<Vocals />} />
       </Route>
+      <Route path="/programs/school" element={<School />} />
       <Route path="/programs/corporate/:programType" element={<Corporate />} />
+      <Route path="/programs/live-gigs" element={<Gigs />} />
       <Route path="/*" element={<PageNotFound />} />
     </Route>
   )
 );
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <DemoContextProvider>
+      <RouterProvider router={router} />
+    </DemoContextProvider>
+  );
 }
 
 export default App;

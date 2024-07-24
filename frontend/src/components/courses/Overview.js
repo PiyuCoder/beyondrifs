@@ -31,7 +31,7 @@ const personArr = [
   },
 ];
 
-export default function Overview({ overviewImg }) {
+export default function Overview({ overviewImg, overviewContent }) {
   return (
     <section className=" h-auto w-full  bg-[#190622] py-12">
       <div className=" w-full h-auto text-center flex flex-col items-center">
@@ -42,10 +42,7 @@ export default function Overview({ overviewImg }) {
           </span>
         </h1>
         <p className=" text-white text-lg tracking-wider leading-relaxed mt-10 px-5 md:w-[68%]">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.Lorem ipsum
+          {overviewContent}
         </p>
         <div className=" w-full md:w-[70%] md:h-[350px] flex items-center  overflow-hidden mt-20 md:rounded-[35px]">
           <img className="" src={overviewImg} />
