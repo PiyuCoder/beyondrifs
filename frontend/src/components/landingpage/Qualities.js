@@ -25,7 +25,7 @@ const items = [
 
 export default function Qualities() {
   return (
-    <section className=" w-full p-24 h-auto lg:h-96 flex items-center justify-center text-white">
+    <section className=" w-full p-24 h-auto relative z-10 lg:h-96 flex items-center justify-center text-white">
       <div className=" flex gap-7 flex-wrap lg:flex-nowrap justify-center">
         {items.map((item, i) => (
           <div

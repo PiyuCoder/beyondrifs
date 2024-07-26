@@ -30,8 +30,7 @@ const boxes = [
 
 export default function MusicalTale() {
   return (
-    <section className="w-full h-auto z-0 relative min-h-full flex flex-col-reverse lg:flex-row py-14 px-7">
-      <StarryBackground />
+    <section className="w-full h-auto z-10 relative min-h-full flex flex-col-reverse lg:flex-row py-14 px-7">
       <div className="flex flex-col items-center gap-9 lg:gap-3 w-full lg:w-1/2 px- xl:ps-24">
         {boxes.map((box, index) => (
           <div

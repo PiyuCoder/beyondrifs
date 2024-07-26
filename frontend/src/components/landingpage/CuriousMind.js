@@ -28,7 +28,7 @@ export default function CuriousMind() {
   };
 
   return (
-    <section className="text-white text-center h-auto min-h-full lg:px-32 pt-32 ">
+    <section className="text-white text-center h-auto min-h-full lg:px-32 pt-32 pb-12 relative z-10 ">
       <h1 className="text-2xl md:text-5xl font-medium mb-20">
         Curious Minds Want to Know
       </h1>

@@ -115,7 +115,8 @@ const CircleCarousel = () => {
         </span>
       </h1>
       <div className="w-screen flex  mx-auto h-full items-end lg:items-center justify-center md:justify-start  py-10 lg:gap-36">
-        <div className=" p-6 rounded-xl w-full md:w-3/5 z-10 bg-black md:bg-transparent bg-opacity-30  backdrop-blur-sm md:backdrop-blur-0">
+        <div className=" p-6 rounded-xl w-full md:w-3/5 z-10 ">
+          {/* bg-black md:bg-transparent md:bg-opacity-30  backdrop-blur-sm md:backdrop-blur-none */}
           <div className="text-white lg:px-28 text-start ">
             <h1 className="text-3xl font-medium lg:mb-8 transition-all ease-linear duration-1000">
               {images[currentIndex].name}

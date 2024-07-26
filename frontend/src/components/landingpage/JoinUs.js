@@ -39,7 +39,7 @@ export default function JoinUs() {
         <h2 className="text-white text-2xl md:text-4xl font-medium text-center">
           Join Us and excel in your Music Journey
         </h2>
-        <div className="flex flex-wrap px-10 items-center text-center mt-10 md:mt-20 gap-7 md:gap-16">
+        <div className="flex flex-wrap px-10 items-start text-center mt-10 md:mt-20 gap-7 md:gap-16">
           {joinUsArr?.map((data, index) => (
             <div
               key={index}

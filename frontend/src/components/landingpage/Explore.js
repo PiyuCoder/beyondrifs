@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 export default function Explore() {
   return (
-    <section className="text-white relative text-center h-auto   xl:h-full w-full  mt-10 ">
+    <section className="text-white relative text-center h-auto z-10   xl:h-full w-full  ">
       <div className=" absolute top-0 left-0 h-full w-full " />
       <div className="  h-full  bg-custom-gradient-tb lg:px-20  sm:pb-0">
         <h1 className="text-2xl md:text-5xl  mb-20 leading-relaxed">

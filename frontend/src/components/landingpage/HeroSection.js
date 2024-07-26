@@ -1,101 +1,66 @@
-import React from "react";
-import Slider from "react-slick";
+import React, { useState, useEffect } from "react";
 import NavBar from "../NavBar";
-import manWithGuitar from "../../assets/images/image84.png";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import hero1 from "../../assets/images/image84.png";
+import hero2 from "../../assets/images/landing-hero-img2.png";
+import hero3 from "../../assets/images/landing-hero-img3.png";
+import hero4 from "../../assets/images/landing-hero-img4.png";
 import StarryBackground from "../StarryBackground";
 import { useNavigate } from "react-router-dom";
 
-const data = [
-  {
-    image: manWithGuitar,
-    heading: "Unlock your Musical Journey",
-    content:
-      "At Beyondriffs, we believe music speaks to the soul. Whether you're just starting out or striving to master your musical skills, we provide a life-changing learning journey. Join us now and discover your musical voice at Beyondriffs!",
-    buttons: [
-      {
-        text: "Book free trial",
-        url: "/book-demo/choose-role",
-        style: "solid",
-      },
-      { text: "Teach with us", url: "#", style: "transparent" },
-    ],
-  },
-  {
-    image:
-      "https://cdn.prod.website-files.com/663d6c83b39950a5d57d94b5/663da534d6cfff2b27b5a0e0_Hero%20Image.webp",
-    heading: "Join our courses",
-    content:
-      "We offer expert online courses in musical instruments for beginners and seasonal musicians. Join our community and discover the magic of music.",
-    buttons: [{ text: "Join", url: "#", style: "solid" }],
-  },
-];
+const images = [hero1, hero2, hero3, hero4];
 
 export default function HeroSection() {
+  const [currentIndex, setCurrentIndex] = useState(0);
   const navigate = useNavigate();
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    fade: false,
-    pauseOnHover: false,
-  };
+  const delay = 5000; // Duration for each slide
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, delay);
+
+    return () => clearInterval(intervalId); // Clean up the interval on component unmount
+  }, []);
 
   return (
-    <section className="relative w-full z-20 h-auto lg:h-full overflow-hidden">
-      <StarryBackground />
+    <section
+      className="relative w-full h-screen overflow-hidden bg-cover bg-center transition-all ease-in-out duration-1000"
+      style={{
+        backgroundImage: `url(${images[currentIndex]})`,
+      }}
+    >
       <NavBar />
-      <div className="absolute inset-0 bg-gradient-to-t from-black to-purple-900 opacity-20"></div>
-      <Slider {...settings} className="relative w-full h-full">
-        {data.map((el, index) => (
-          <div key={index} className="w-full h-full py-10 md:py-0 ">
-            <div className="relative flex flex-col-reverse lg:flex-row justify-between items-center w-full h-full  lg:px-0 lg:ps-20">
-              <div className=" absolute lg:relative w-full lg:w-1/2 flex flex-col justify-center items-start gap-6 p-6">
-                <h1 className="text-white text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-medium">
-                  {el.heading}
-                </h1>
-                <p className="text-white text-base md:text-lg tracking-wide">
-                  {el.content}
-                </p>
-                <div className="flex items-center justify-start flex-wrap gap-5 w-full mt-7">
-                  {el.buttons.map((btn, btnIndex) => (
-                    <button
-                      onClick={() => navigate(btn.url)}
-                      key={btnIndex}
-                      className={`${
-                        btn.style === "solid"
-                          ? "bg-gradient-to-r from-custom-purple-1 via-custom-purple-2 to-custom-purple-3 hover:opacity-80"
-                          : "border border-custom-purple-2 hover:bg-purple-800 hover:bg-opacity-20"
-                      } text-white py-3 px-7 text-xl rounded-2xl`}
-                    >
-                      {btn.text}
-                    </button>
-                  ))}
-                </div>
-              </div>
-              <div className="w-full lg:w-1/2 h-[500px] overflow-hidden bg-black bg-opacity-30  lg:h-full">
-                <img
-                  className="w-full h-full object-cover object-center lg:opacity-65"
-                  src={el.image}
-                  alt={`Image ${index + 1}`}
-                />
-              </div>
-            </div>
-          </div>
-        ))}
-      </Slider>
-      <style jsx>{`
-        .slick-slide > div {
-          display: flex !important;
-          width: 100%;
-          height: 100%;
-        }
-      `}</style>
+      <StarryBackground landing />
+      <div className="absolute inset-0 z-20">
+        {/* This overlay adds a gradient to ensure text readability */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black to-purple-900 opacity-30"></div>
+        {/* This pseudo-element will handle the image opacity */}
+        <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+      </div>
+      <div className="absolute lg:w-1/2 inset-0 z-20 flex flex-col justify-center items-start p-6 md:p-12 lg:p-24">
+        <h1 className="text-white text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-medium">
+          Unlock your Musical Journey
+        </h1>
+        <p className="text-white text-base md:text-lg tracking-wide mt-4">
+          We offer expert online courses in musical instruments, for beginners
+          and seasoned musicians. Join our community and discover the magic of
+          music.
+        </p>
+        <div className="mt-6 flex gap-4">
+          <button
+            onClick={() => navigate("/book-demo")}
+            className="bg-gradient-to-r from-custom-purple-1 via-custom-purple-2 to-custom-purple-3 hover:from-[#441162] hover:via-[#7200b4]  hover:to-[#b12bff] text-white py-3 px-6 text-xl rounded-2xl"
+          >
+            Book Free Trial
+          </button>
+          <button
+            // onClick={() => navigate("/book-demo")}
+            className="border border-custom-purple-2 hover:bg-purple-800 hover:bg-opacity-20 text-white py-3 px-6 text-xl rounded-2xl"
+          >
+            Teach with us
+          </button>
+        </div>
+      </div>
     </section>
   );
 }

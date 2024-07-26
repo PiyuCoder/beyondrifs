@@ -16,18 +16,20 @@ const images = [1, 2, 3, 4, 5];
 
 export default function LandingPage() {
   return (
-    <div className=" overflow-y-auto h-full w-full bg-black overflow-x-hidden no-scrollbar">
-      {/* <StarryBackground landing /> */}
-      <HeroSection />
-      <Features />
-      <MusicalTale />
-      <StartLearning />
-      <CircleCarousel />
-      <JoinUs />
-      <Qualities />
-      <Carousel3D slides={images} option={{ loop: true }} />
-      <CuriousMind />
-      <Explore />
+    <div className=" relative overflow-y-auto h-full w-full bg-black  overflow-x-hidden no-scrollbar">
+      <StarryBackground landing />
+      <div className="relative z-10 w-full h-full">
+        <HeroSection />
+        <Features />
+        <MusicalTale />
+        <StartLearning />
+        <CircleCarousel />
+        <JoinUs />
+        <Qualities />
+        <Carousel3D slides={images} option={{ loop: true }} />
+        <CuriousMind />
+        <Explore />
+      </div>
     </div>
   );
 }

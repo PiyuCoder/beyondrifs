@@ -177,7 +177,7 @@ const Carousel3D = () => {
   }, [slides.length]);
 
   return (
-    <section className=" select-none w-full h-auto min-h-full text-center py-20 pb-20">
+    <section className=" select-none w-full h-auto min-h-full text-center py-20 pb-20 relative z-10">
       <h1 className=" text-2xl md:text-5xl font-medium text-white mb-5 md:mb-16 lg:mb-28">
         Testimonials
       </h1>

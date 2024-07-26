@@ -12,12 +12,14 @@ export default function AboutUs() {
   return (
     <div className=" w-full h-full relative z-0 bg-black min-h-auto overflow-y-auto">
       <StarryBackground landing />
-      <TopSection />
-      <About />
-      <Features />
-      <OurCourses />
-      <Carousel />
-      <Explore />
+      <div className=" w-full h-full relative z-10">
+        <TopSection />
+        <About />
+        <Features />
+        <OurCourses />
+        <Carousel />
+        <Explore />
+      </div>
     </div>
   );
 }

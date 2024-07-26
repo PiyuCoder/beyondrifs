@@ -7,8 +7,8 @@ const StarryBackground = ({ landing }) => {
     const canvas = canvasRef.current;
     const context = canvas.getContext("2d");
     const stars = [];
-    const numStars = 30;
-    const maxStarSize = 2;
+    const numStars = 60;
+    const maxStarSize = 1;
     const speed = 0.3;
 
     // Resize the canvas to full window size
@@ -72,8 +72,8 @@ const StarryBackground = ({ landing }) => {
     <canvas
       ref={canvasRef}
       className={`${
-        !landing ? "absolute" : "fixed"
-      } top-0 left-0 w-full h-full -z-20 bg-black `}
+        !landing ? "absolute bg-black" : "fixed"
+      } top-0 left-0 w-full h-full z-0  `}
       // className={`absolute top-0 left-0 w-full h-full -z-20 bg-black `}
     />
   );

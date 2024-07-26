@@ -22,8 +22,8 @@ const dataArray = [
 
 export default function SchoolsAssociated() {
   return (
-    <section className="w-full h-full relative flex flex-col items-center justify-center">
-      <StarryBackground landing />
+    <section className="w-full h-full relative  flex flex-col items-center justify-center select-none">
+      {/* <StarryBackground landing /> */}
       <h2 className="text-white text-2xl md:text-5xl font-medium">
         Schools Associated{" "}
         <span className=" bg-clip-text text-transparent bg-gradient-to-b from-[#420565] via-[#6A0B90] to-white">
