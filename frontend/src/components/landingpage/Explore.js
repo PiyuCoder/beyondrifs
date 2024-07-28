@@ -59,7 +59,11 @@ export default function Explore() {
         <hr className=" h-1 w-full " />
         <div className=" py-10 px-5 flex items-center justify-between">
           <Link className=" bg-white p-1 rounded-md" to={"/"}>
-            <img className=" h-7 sm:h-auto z-10 relative" src={bottomLogo} />
+            <img
+              className=" h-7 sm:h-auto z-10 relative"
+              src={bottomLogo}
+              alt="logo"
+            />
           </Link>
           <div className=" text-white text-2xl flex gap-2 sm:gap-7 z-10">
             <FaTwitter className=" hover:text-purple-400 cursor-pointer" />

@@ -39,7 +39,7 @@ export default function ChooseTime() {
   const [selectedTime, setSelectedTime] = useState("");
   const [prefix, setPrefix] = useState("AM");
   const navigate = useNavigate();
-  const { handleTimeChange, formData, handleSetError } = useDemoContext();
+  const { handleTimeChange, handleSetError } = useDemoContext();
 
   const today = new Date();
   const daysToShow = 7;

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import OtpInput from "react-otp-input";
 import { useLocation, useNavigate } from "react-router-dom";
 import Loader from "../../components/Loader";
@@ -6,7 +6,6 @@ import Loader from "../../components/Loader";
 export default function Otp() {
   const [OTP, setOTP] = useState("");
   const [loading, setLoading] = useState(false);
-  const [canSend, setCanSend] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 

@@ -6,7 +6,6 @@ import { collection, addDoc } from "firebase/firestore";
 const demoContext = createContext();
 
 export default function DemoContextProvider({ children }) {
-  const [error, setError] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",

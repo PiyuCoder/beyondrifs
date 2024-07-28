@@ -1,8 +1,4 @@
-import logo from "./logo.svg";
 import "./App.css";
-import StarryBackground from "./components/StarryBackground";
-import HeroSection from "./components/landingpage/HeroSection";
-import NavBar from "./components/NavBar";
 import LandingPage from "./pages/LandingPage";
 
 import {
@@ -12,9 +8,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import MainLayout from "./layout/MainLayout";
-import Home from "./pages/Home";
 import Courses from "./pages/courses/Courses";
-import Piano from "./pages/courses/Piano";
 import CourseLayout from "./layout/CourseLayout";
 import Vocals from "./pages/courses/Vocals";
 import PageNotFound from "./pages/PageNotFound";
@@ -38,7 +32,6 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<MainLayout />}>
       <Route path="" element={<LandingPage />} />
-      <Route path="home" element={<Home />} />
       <Route path="login" element={<Login />} />
       <Route path="login-auth" element={<Otp />} />
       <Route path="user-dashboard" element={<UserDashboard />} />

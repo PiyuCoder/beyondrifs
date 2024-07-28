@@ -1,9 +1,6 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
 import CountUp from "react-countup";
-import trialPractice from "../../assets/images/adaptive-learning.png";
-import musicTools from "../../assets/images/music-tools.png";
-import adaptiveLearn from "../../assets/images/trial-practice.png";
 
 const joinUsArr = [
   {

@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import PhoneInput from "react-phone-input-2";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useDemoContext } from "../../context/demoContext";
 import studentImage from "../../assets/images/student-demo.png";
 import tutorImage from "../../assets/images/tutor-demo.png";
@@ -31,11 +31,16 @@ export default function ChooseRole() {
           <img
             className=" rounded-full w-32 h-32 bg-black"
             src={studentImage}
+            alt="Student"
           />
           <p className="text-xl mt-3">Student</p>
         </div>
         <div onClick={() => handleValueChange("role", "Tutor")}>
-          <img className=" rounded-full w-32 h-32 bg-black" src={tutorImage} />
+          <img
+            className=" rounded-full w-32 h-32 bg-black"
+            src={tutorImage}
+            alt="Tutor"
+          />
           <p className="text-xl mt-3">Tutor</p>
         </div>
       </div>

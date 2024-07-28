@@ -2,7 +2,6 @@ import React from "react";
 import HeroSection from "../components/landingpage/HeroSection";
 import Features from "../components/landingpage/Features";
 import StarryBackground from "../components/StarryBackground";
-import NavBar from "../components/NavBar";
 import CircleCarousel from "../components/landingpage/CircleCarousel";
 import MusicalTale from "../components/landingpage/MusicalTale";
 import JoinUs from "../components/landingpage/JoinUs";

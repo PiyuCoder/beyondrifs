@@ -1,37 +1,34 @@
-import React, { useState } from 'react';
-import { IoIosArrowDown } from 'react-icons/io';
+import React, { useState } from "react";
+import { IoIosArrowDown } from "react-icons/io";
 
 const questions = [
   {
-    heading: 'What is Beyondriffs?',
-    answer: 'This is an answer.',
+    heading: "What is Beyondriffs?",
+    answer: "This is an answer.",
   },
   {
-    heading: 'Where is Beyonfdriffs Located?',
-    answer: 'This is an answer.',
+    heading: "Where is Beyonfdriffs Located?",
+    answer: "This is an answer.",
   },
   {
-    heading: 'How are classes Conducted ?',
-    answer: 'This is an answer.',
+    heading: "How are classes Conducted ?",
+    answer: "This is an answer.",
   },
   {
-    heading: 'Does Beyondriffs conduct offline classes as well ?',
-    answer: 'This is an answer.',
+    heading: "Does Beyondriffs conduct offline classes as well ?",
+    answer: "This is an answer.",
   },
-  ,
   {
-    heading: 'Where is Beyonfdriffs Located?',
-    answer: 'This is an answer.',
+    heading: "Where is Beyonfdriffs Located?",
+    answer: "This is an answer.",
   },
-  ,
   {
-    heading: 'How are classes Conducted ?',
-    answer: 'This is an answer.',
+    heading: "How are classes Conducted ?",
+    answer: "This is an answer.",
   },
-  ,
   {
-    heading: 'Does Beyondriffs conduct offline classes as well ?',
-    answer: 'This is an answer.',
+    heading: "Does Beyondriffs conduct offline classes as well ?",
+    answer: "This is an answer.",
   },
 ];
 
@@ -54,13 +51,13 @@ export default function FAQs() {
             onClick={() => toggleAccordion(i)}
             className={`cursor-pointer relative border-t border-l border-white text-start rounded-xl p-4 ${
               i === selected
-                ? 'bg-gradient-to-b from-custom-purple-1  to-purple-600 h-auto '
-                : ' border h-24'
+                ? "bg-gradient-to-b from-custom-purple-1  to-purple-600 h-auto "
+                : " border h-24"
             }`}
           >
             <div className=" float-right w-12 h-12 bg-gradient-to-r from-purple-950 to-purple-800 flex items-center justify-center rounded-2xl">
               <IoIosArrowDown
-                className={`${i === selected ? ' rotate-180' : ''}`}
+                className={`${i === selected ? " rotate-180" : ""}`}
               />
             </div>
             <h2 className="py-3 text-xl lg:text-2xl font-medium">
@@ -70,7 +67,7 @@ export default function FAQs() {
             {i === selected && (
               <p
                 className={` ${
-                  i === selected ? 'block' : 'hidden'
+                  i === selected ? "block" : "hidden"
                 } py-4 text-xl`}
               >
                 {quest.answer}

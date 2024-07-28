@@ -1,19 +1,17 @@
-import React, { useState } from 'react';
-import { IoLogoLinkedin, IoLogoTwitter } from 'react-icons/io5';
-import { RiInstagramFill } from 'react-icons/ri';
-import { TbSend } from 'react-icons/tb';
-import { BiLogoGmail, BiLike, BiCommentDetail  } from 'react-icons/bi';
-import { BsDot } from 'react-icons/bs';
-import { AiFillLike } from "react-icons/ai";
-import { LuEye } from "react-icons/lu";
-import img1 from '../../assets/images/IndiBlog-img1.jpg';
-import img2 from '../../assets/images/IndiBlog-img2.jpg';
-import img3 from '../../assets/images/IndiBlog-img3.jpg';
-import img4 from '../../assets/images/IndiBlog-img4.jpg';
-import img5 from '../../assets/images/IndiBlog-img5.jpg';
+import React, { useState } from "react";
+import { IoLogoLinkedin, IoLogoTwitter } from "react-icons/io5";
+import { RiInstagramFill } from "react-icons/ri";
+import { TbSend } from "react-icons/tb";
+import { BiLogoGmail } from "react-icons/bi";
+import { BsDot } from "react-icons/bs";
+import img1 from "../../assets/images/IndiBlog-img1.jpg";
+import img2 from "../../assets/images/IndiBlog-img2.jpg";
+import img3 from "../../assets/images/IndiBlog-img3.jpg";
+import img4 from "../../assets/images/IndiBlog-img4.jpg";
+import img5 from "../../assets/images/IndiBlog-img5.jpg";
 
 function IndiContent() {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
   const handleClick = () => {
     console.log(email);
   };
@@ -102,7 +100,7 @@ function IndiContent() {
             types and styles, from classical to electric. Whether you’re
             strumming chords or shredding solos, the guitar invites you to
             explore melodies, rhythms, and harmonies. So, grab your pick, tune
-            those strings, and let the music begin!{' '}
+            those strings, and let the music begin!{" "}
           </p>
         </div>
         <div className="w-full sm:w-2/3">
@@ -168,7 +166,7 @@ function IndiContent() {
           </h4>
           <div className="font-normal text-xl sm:text-2xl  flex flex-col sm:flex-row items-start justify-between">
             <p className="font-semibold flex items-center mr-2">
-              1. Finger Placement :{' '}
+              1. Finger Placement :{" "}
             </p>
             <p className="flex-1">
               Place your fingers on the fretboard according to the chord
@@ -192,7 +190,9 @@ function IndiContent() {
         <h3 className="font-semibold text-3xl mb-6">
           The Challenge: Barre Chords
         </h3>
-        <h4 className="font-semibold text-xl sm:text-2xl  mb-4">What Are Barre Chords?</h4>
+        <h4 className="font-semibold text-xl sm:text-2xl  mb-4">
+          What Are Barre Chords?
+        </h4>
         <p className="font-normal text-lg mb-5">
           Barre chords (or “bar chords”) involve using one finger to press down
           multiple strings across the fretboard. They allow you to play any
@@ -238,7 +238,7 @@ function IndiContent() {
           </h4>
           <div className="font-normal text-xl sm:text-2xl  flex flex-col sm:flex-row items-start justify-between">
             <p className="font-semibold flex items-center mr-2">
-              1. The Barre Finger :{' '}
+              1. The Barre Finger :{" "}
             </p>
             <p className="flex-1">
               Use your index finger to press down all the strings at a specific
@@ -247,7 +247,7 @@ function IndiContent() {
           </div>
           <div className="font-normal text-xl sm:text-2xl  flex flex-col sm:flex-row items-start justify-between mt-10">
             <p className="font-semibold flex items-center mr-2">
-              2. Thumb Placement :{' '}
+              2. Thumb Placement :{" "}
             </p>
             <p className="flex-1">
               Position your thumb behind the neck for stability.
@@ -255,7 +255,7 @@ function IndiContent() {
           </div>
           <div className="font-normal text-xl sm:text-2xl  flex flex-col sm:flex-row items-start justify-between mt-10">
             <p className="font-semibold flex items-center mr-2">
-              3. Practice :{' '}
+              3. Practice :{" "}
             </p>
             <p className="flex-1">
               Start with partial barre chords (e.g., F minor) before tackling
@@ -267,33 +267,34 @@ function IndiContent() {
 
       {/* Tips and Tricks */}
       <div className="w-full mt-10">
-        <h3 className="font-semibold text-3xl mb-8">
-        Tips and Tricks
-        </h3>
+        <h3 className="font-semibold text-3xl mb-8">Tips and Tricks</h3>
         <div className="w-full flex flex-col sm:flex-row  gap-6">
           <div className="3/5 flex flex-col justify-between gap-4 sm:gap-0">
             <div className="font-normal text-xl sm:text-2xl  flex flex-col sm:flex-row items-start justify-between">
               <p className="font-semibold flex items-center mr-2">
-                <BsDot />Relax Your Hand : 
+                <BsDot />
+                Relax Your Hand :
               </p>
               <p className="flex-1">
-              Tension makes barre chords harder. Keep your hand relaxed.
+                Tension makes barre chords harder. Keep your hand relaxed.
               </p>
             </div>
             <div className="font-normal text-xl sm:text-2xl  flex flex-col sm:flex-row items-start justify-between">
               <p className="font-semibold flex items-center mr-2">
-                <BsDot />Roll Your Finger : 
+                <BsDot />
+                Roll Your Finger :
               </p>
               <p className="flex-1">
-              Roll your index finger slightly to cover the strings evenly.
+                Roll your index finger slightly to cover the strings evenly.
               </p>
             </div>
             <div className="font-normal text-xl sm:text-2xl  flex flex-col sm:flex-row items-start justify-between">
               <p className="font-semibold flex items-center mr-2">
-                <BsDot />Patience : 
+                <BsDot />
+                Patience :
               </p>
               <p className="flex-1">
-              Barre chords take time. Be patient and practice consistently.
+                Barre chords take time. Be patient and practice consistently.
               </p>
             </div>
           </div>
@@ -308,21 +309,29 @@ function IndiContent() {
       </div>
 
       {/* Conclusion */}
-      <div className='w-full mt-20'>
-      <h3 className="font-semibold text-3xl mb-8">
-        Conclusion
-        </h3>
-        <div className='w-full'>
-          <img src={img5} alt='image'className=" object-cover object-center rounded-2xl w-full h-40 sm:h-80" />
+      <div className="w-full mt-20">
+        <h3 className="font-semibold text-3xl mb-8">Conclusion</h3>
+        <div className="w-full">
+          <img
+            src={img5}
+            alt="image"
+            className=" object-cover object-center rounded-2xl w-full h-40 sm:h-80"
+          />
         </div>
-        <div className='mt-10'>
-          <p className='font-normal text-lg sm:text-xl mb-5'>Unlocking the secrets of guitar chords is like discovering hidden treasures. Embrace the challenge, practice diligently, and soon you’ll be playing your favorite songs with confidence. 🎵✨</p>
-          <p className='font-normal text-lg sm:text-xl mb-5'>Remember, Beyondriffs is here to support your musical journey. Happy strumming! 🎸</p>
+        <div className="mt-10">
+          <p className="font-normal text-lg sm:text-xl mb-5">
+            Unlocking the secrets of guitar chords is like discovering hidden
+            treasures. Embrace the challenge, practice diligently, and soon
+            you’ll be playing your favorite songs with confidence. 🎵✨
+          </p>
+          <p className="font-normal text-lg sm:text-xl mb-5">
+            Remember, Beyondriffs is here to support your musical journey. Happy
+            strumming! 🎸
+          </p>
         </div>
       </div>
 
       {/* Like */}
-      
     </section>
   );
 }

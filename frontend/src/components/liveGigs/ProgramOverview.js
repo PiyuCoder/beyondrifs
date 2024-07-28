@@ -1,5 +1,5 @@
-import React from 'react';
-import img1 from '../../assets/images/gigs-img2.jpeg';
+import React from "react";
+import img1 from "../../assets/images/gigs-img2.jpeg";
 
 function ProgramOverview() {
   return (
@@ -8,14 +8,15 @@ function ProgramOverview() {
         <img
           src={img1}
           className=" w-full h-full object-cover object-center"
-          style={{ height: 'auto' }}
+          style={{ height: "auto" }}
+          alt="Image1"
         />
       </div>
       <div className="w-full sm:w-1/2 text-white p-10 lg:p-20">
         <h1 className="text-white text-2xl md:text-4xl lg:text-5xl font-semibold mb-2">
           Program
           <span className=" bg-clip-text text-transparent bg-gradient-to-b from-[#420565] via-[#6A0B90] to-white">
-            {''} Overview
+            {""} Overview
           </span>
         </h1>
         <p className="font-normal text-lg text-start sm:text-justify">

@@ -1,5 +1,5 @@
 import React from "react";
-import { Outlet, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import courses from "../../components/constants/courseData";
 import TopSection from "../../components/courses/TopSection";
 import NavBar from "../../components/NavBar";

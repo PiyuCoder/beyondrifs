@@ -1,5 +1,4 @@
 import React from "react";
-import manWithGuitar from "../../assets/images/image84.png";
 import NavBar from "../NavBar";
 
 export default function HeroSection() {

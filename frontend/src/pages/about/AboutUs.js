@@ -1,5 +1,4 @@
 import React from "react";
-import NavBar from "../../components/NavBar";
 import StarryBackground from "../../components/StarryBackground";
 import TopSection from "../../components/aboutUs/TopSection";
 import About from "../../components/aboutUs/About";

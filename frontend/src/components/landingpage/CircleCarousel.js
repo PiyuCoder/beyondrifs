@@ -107,7 +107,7 @@ const CircleCarousel = () => {
   const angle = 360 / images.length; // Adjusted to distribute items on half of the circle
 
   return (
-    <section className="bg-opacity-5 relative text-center py-36 overflow-hidden bg-purple-500 border-2 border-purple-500 border-opacity-65 shadow-[0_0px_250px_5px_rgba(1,1,1,0.3)] -mt-36 shadow-purple-600 rounded-t-full w-[190%] h-[130%] lg:h-[200%] -ml-[45%]">
+    <section className="bg-opacity-5 relative text-center py-36 overflow-hidden bg-purple-500 border-2 border-purple-500 border-opacity-65 shadow-[0_0px_250px_5px_rgba(1,1,1,0.3)] -mt-36 shadow-purple-600 rounded-t-full w-[190%] h-[170%] lg:h-[200%] -ml-[45%]">
       <h1 className="text-2xl md:text-5xl text-white font-medium ">
         Unlock Music Mastery <br /> with{" "}
         <span className="bg-clip-text text-transparent bg-gradient-to-b from-[#420565] via-[#6A0B90] to-white">
@@ -115,13 +115,13 @@ const CircleCarousel = () => {
         </span>
       </h1>
       <div className="w-screen flex  mx-auto h-full items-end lg:items-center justify-center md:justify-start  py-10 lg:gap-36">
-        <div className=" p-6 rounded-xl w-full md:w-3/5 z-10 ">
+        <div className=" p-6 rounded-xl w-full md:w-3/5 z-10  ">
           {/* bg-black md:bg-transparent md:bg-opacity-30  backdrop-blur-sm md:backdrop-blur-none */}
           <div className="text-white lg:px-28 text-start ">
             <h1 className="text-3xl font-medium lg:mb-8 transition-all ease-linear duration-1000">
               {images[currentIndex].name}
             </h1>
-            <p className="font-thin tracking-wide text-lg h-40">
+            <p className="font-thin tracking-wide text-lg h-80  lg:h-64">
               {images[currentIndex].content}
             </p>
             <div className="flex items-baseline justify-between lg:mt-20">

@@ -1,6 +1,5 @@
-import React from 'react';
-import NavBar from '../NavBar';
-import img1 from '../../assets/images/gigs-img1.png';
+import React from "react";
+import NavBar from "../NavBar";
 
 function HeroSection() {
   return (

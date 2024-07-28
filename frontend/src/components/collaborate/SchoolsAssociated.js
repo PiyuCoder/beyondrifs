@@ -1,5 +1,4 @@
 import React from "react";
-import StarryBackground from "../StarryBackground";
 
 const dataArray = [
   {

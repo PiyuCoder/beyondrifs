@@ -1,5 +1,4 @@
 import React from "react";
-import StarryBackground from "../../components/StarryBackground";
 import HeroSection from "../../components/liveGigs/HeroSection";
 import BookTrail from "../../components/liveGigs/BookTrail";
 import ProgramOverview from "../../components/liveGigs/ProgramOverview";
