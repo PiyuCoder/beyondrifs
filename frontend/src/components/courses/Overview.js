@@ -33,21 +33,33 @@ const personArr = [
 
 export default function Overview({ overviewImg, overviewContent }) {
   return (
-    <section className=" h-auto w-full  bg-[#190622] py-12">
-      <div className=" w-full h-auto text-center flex flex-col items-center">
-        <h1 className="text-white text-2xl md:text-4xl lg:text-5xl font-semibold">
+    <section className=" h-auto lg:h-[650px]  w-full  bg-[#190622] ">
+      <div className=" w-full h-full flex flex-col lg:flex-row items-center justify-center py-14 lg:py-0 ">
+        <h1 className="text-white text-2xl md:text-4xl lg:text-5xl font-semibold lg:hidden ">
           Program
           <span className=" bg-clip-text text-transparent bg-gradient-to-b from-[#420565] via-[#6A0B90] to-white">
             {""} Overview
           </span>
         </h1>
-        <p className=" text-white text-lg tracking-wider leading-relaxed mt-10 px-5 md:w-[68%]">
-          {overviewContent}
-        </p>
-        <div className=" w-full md:w-[70%] md:h-[350px] flex items-center  overflow-hidden mt-20 md:rounded-[35px]">
-          <img className="" src={overviewImg} />
+        <div className=" w-full h-full  flex items-center  overflow-hidden  md:rounded-[35px] mt-4 lg:mt-0">
+          <img
+            className=" w-full h-full object-cover transform scale-x-[-1]"
+            src={overviewImg}
+          />
         </div>
-        <div className=" px-5 w-full md:w-[70%] flex flex-wrap justify-evenly gap-16 text-white mt-10 ">
+        <div className=" w-full text-center xl:text-start relative z-10 flex flex-col justify-center h-full lg:-ms-40 lg:px-8 bg-gradient-to-r from-[#0e0215be] via-[#420565cb] to-[#0d021300]">
+          <h1 className="text-white text-2xl md:text-4xl lg:text-5xl font-semibold hidden lg:block">
+            Program
+            <span className=" bg-clip-text text-transparent lg:bg-gradient-to-b via-transparent  lg:from-[#420565] lg:via-[#6A0B90] lg:to-white">
+              {""} Overview
+            </span>
+          </h1>
+          <p className=" text-white text-lg tracking-wider leading-loose mt-10   ">
+            {overviewContent}
+          </p>
+        </div>
+
+        {/* <div className=" px-5 w-full md:w-[70%] flex flex-wrap justify-evenly gap-16 text-white mt-10 ">
           {personArr.map((person, i) => (
             <div
               className=" border border-purple-500 border-opacity-25 rounded-3xl p-4 max-w-96 flex"
@@ -68,7 +80,7 @@ export default function Overview({ overviewImg, overviewContent }) {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );

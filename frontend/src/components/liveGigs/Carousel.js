@@ -1,13 +1,13 @@
-import React, { useRef } from 'react';
-import EventBox from './EventBox';
-import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
-import img1 from '../../assets/images/gigs-img3.png';
-import img2 from '../../assets/images/gigs-img4.png';
-import img3 from '../../assets/images/gigs-img5.jpeg';
-import img4 from '../../assets/images/IndiBlog-img1.jpg';
-import img5 from '../../assets/images/IndiBlog-img2.jpg';
-import img6 from '../../assets/images/IndiBlog-img3.jpg';
-import StarryBackground from '../StarryBackground';
+import React, { useRef } from "react";
+import EventBox from "./EventBox";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import img1 from "../../assets/images/gigs-img3.png";
+import img2 from "../../assets/images/gigs-img4.png";
+import img3 from "../../assets/images/gigs-img5.jpeg";
+import img4 from "../../assets/images/IndiBlog-img1.jpg";
+import img5 from "../../assets/images/IndiBlog-img2.jpg";
+import img6 from "../../assets/images/IndiBlog-img3.jpg";
+import StarryBackground from "../StarryBackground";
 
 const Carousel = () => {
   const carouselRef = useRef(null);
@@ -15,50 +15,50 @@ const Carousel = () => {
   const events = [
     {
       id: 1,
-      title: 'Rock on Artist Meetup',
+      title: "Rock on Artist Meetup",
       description:
-        'Lorem ipsum dolor sit amet consectetur. Arcu habitant curabitur ut cras.',
-      date: '10 June 2024',
+        "Lorem ipsum dolor sit amet consectetur. Arcu habitant curabitur ut cras.",
+      date: "10 June 2024",
       image: img1,
     },
     {
       id: 2,
-      title: 'Weekend night Jam',
+      title: "Weekend night Jam",
       description:
-        'Lorem ipsum dolor sit amet consectetur. Arcu habitant curabitur ut cras.',
-      date: '21 June 2024',
+        "Lorem ipsum dolor sit amet consectetur. Arcu habitant curabitur ut cras.",
+      date: "21 June 2024",
       image: img2,
     },
     {
       id: 3,
-      title: 'Harmony Nights',
+      title: "Harmony Nights",
       description:
-        'Lorem ipsum dolor sit amet consectetur. Arcu habitant curabitur ut cras.',
-      date: '25 June 2024',
+        "Lorem ipsum dolor sit amet consectetur. Arcu habitant curabitur ut cras.",
+      date: "25 June 2024",
       image: img3,
     },
     {
       id: 4,
-      title: 'Harmony Nights',
+      title: "Harmony Nights",
       description:
-        'Lorem ipsum dolor sit amet consectetur. Arcu habitant curabitur ut cras.',
-      date: '25 June 2024',
+        "Lorem ipsum dolor sit amet consectetur. Arcu habitant curabitur ut cras.",
+      date: "25 June 2024",
       image: img4,
     },
     {
       id: 5,
-      title: 'Harmony Nights',
+      title: "Harmony Nights",
       description:
-        'Lorem ipsum dolor sit amet consectetur. Arcu habitant curabitur ut cras.',
-      date: '25 June 2024',
+        "Lorem ipsum dolor sit amet consectetur. Arcu habitant curabitur ut cras.",
+      date: "25 June 2024",
       image: img5,
     },
     {
       id: 6,
-      title: 'Harmony Nights',
+      title: "Harmony Nights",
       description:
-        'Lorem ipsum dolor sit amet consectetur. Arcu habitant curabitur ut cras.',
-      date: '25 June 2024',
+        "Lorem ipsum dolor sit amet consectetur. Arcu habitant curabitur ut cras.",
+      date: "25 June 2024",
       image: img6,
     },
   ];
@@ -67,7 +67,7 @@ const Carousel = () => {
     if (carouselRef.current) {
       carouselRef.current.scrollBy({
         left: -carouselRef.current.offsetWidth,
-        behavior: 'smooth',
+        behavior: "smooth",
       });
     }
   };
@@ -76,7 +76,7 @@ const Carousel = () => {
     if (carouselRef.current) {
       carouselRef.current.scrollBy({
         left: carouselRef.current.offsetWidth,
-        behavior: 'smooth',
+        behavior: "smooth",
       });
     }
   };
@@ -84,11 +84,11 @@ const Carousel = () => {
   return (
     <div className="relative w-full h-auto text-white z-0 p-10 lg:p-20 mt-20">
       <StarryBackground />
-      <div className="w-full flex flex-col">
+      <div className="w-full flex flex-col relative z-10">
         <h1 className="text-white text-2xl md:text-4xl lg:text-5xl font-semibold mb-16">
           Previous
           <span className=" bg-clip-text text-transparent bg-gradient-to-b from-[#420565] via-[#6A0B90] to-white">
-            {''} Event
+            {""} Event
           </span>
         </h1>
         <div
@@ -122,7 +122,7 @@ const Carousel = () => {
       <h1 className="text-white text-2xl md:text-4xl lg:text-5xl font-semibold -mb-28 md:-mb-36 mt-20">
         Features
         <span className="bg-clip-text text-transparent bg-gradient-to-b from-[#420565] via-[#6A0B90] to-white">
-          {''} Highlights
+          {""} Highlights
         </span>
       </h1>
     </div>

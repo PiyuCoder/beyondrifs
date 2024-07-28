@@ -1,6 +1,6 @@
 const EventBox = ({ event }) => {
   return (
-    <div className="snap-start flex-none w-full lg:w-1/3 h-5/6 bg-transparent text-white pb-4 rounded-[32px] border border-violet-700 flex flex-col gap-5">
+    <div className="snap-start relative z-10 flex-none w-full lg:w-1/3 h-5/6 bg-transparent text-white pb-4 rounded-[32px] border border-violet-700 flex flex-col gap-5">
       <div className="w-full h-80">
         <img
           src={event.image}

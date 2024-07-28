@@ -25,9 +25,9 @@ const items = [
 ];
 export default function Highlights() {
   return (
-    <section className=" relative z-0 h-auto lg:h-full w-full  py-12">
+    <section className=" relative z-10 h-auto lg:h-full w-full  py-12">
       <StarryBackground course />
-      <div className=" w-full h-full text-center flex flex-col items-center ">
+      <div className=" w-full h-full text-center flex flex-col items-center relative z-10 ">
         <h1 className="text-white text-2xl md:text-4xl lg:text-5xl font-semibold">
           Course
           <span className=" bg-clip-text text-transparent bg-gradient-to-b from-[#420565] via-[#6A0B90] to-white">

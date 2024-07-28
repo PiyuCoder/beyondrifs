@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import PhoneInput from "react-phone-input-2";
 import { Link, useNavigate } from "react-router-dom";
 import { useDemoContext } from "../../context/demoContext";
+import studentImage from "../../assets/images/student-demo.png";
+import tutorImage from "../../assets/images/tutor-demo.png";
 
 const genders = ["Male", "Female", "I don't tell"];
 export default function ChooseRole() {
@@ -26,11 +28,14 @@ export default function ChooseRole() {
       <p className=" tracking-wider">Let us know who is attending the trial</p>
       <div className=" flex justify-center items-center gap-24 my-6">
         <div onClick={() => handleValueChange("role", "Student")}>
-          <img className=" rounded-full" src="https://placehold.co/100x100" />
+          <img
+            className=" rounded-full w-32 h-32 bg-black"
+            src={studentImage}
+          />
           <p className="text-xl mt-3">Student</p>
         </div>
         <div onClick={() => handleValueChange("role", "Tutor")}>
-          <img className=" rounded-full" src="https://placehold.co/100x100" />
+          <img className=" rounded-full w-32 h-32 bg-black" src={tutorImage} />
           <p className="text-xl mt-3">Tutor</p>
         </div>
       </div>

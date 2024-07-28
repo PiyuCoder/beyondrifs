@@ -7,13 +7,15 @@ export default function ContactDetails() {
   const { handleSubmit, formData, handleValueChange, handleSetError } =
     useDemoContext();
 
-  const handleDetailsSubmit = () => {
+  const handleDetailsSubmit = async () => {
     if (!formData.ageGroup) {
       return handleSetError("Select an age group");
     } else if (!formData.email) {
       return handleSetError("Enter your email");
     }
-    const res = handleSubmit();
+    const res = await handleSubmit();
+
+    console.log(res);
 
     if (res.success) navigate("/");
   };

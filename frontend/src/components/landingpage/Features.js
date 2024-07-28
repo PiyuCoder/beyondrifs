@@ -64,8 +64,8 @@ export default function Features() {
   };
 
   return (
-    <section className="min-h-[80%] h-auto w-full relative z-10 -mt-24">
-      <h2 className="text-white text-2xl md:text-5xl text-center font-medium relative z-20 mb-14">
+    <section className="min-h-[80%] h-auto w-full relative z-20 -mt-24">
+      <h2 className="text-white text-2xl md:text-5xl text-center font-medium  mb-14">
         Discover our Top Features
       </h2>
       <div className="relative min-h-96 w-full flex flex-col justify-center items-center bg-gradient-to-b from-black via-[#54147092] to-black">

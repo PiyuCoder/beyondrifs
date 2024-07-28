@@ -1,7 +1,7 @@
-import pianoOverview from "../../assets/images/piano2.png";
-import guitarOverview from "../../assets/images/guitar2.png";
-import ukuleleOverview from "../../assets/images/ukulele2.png";
-import musicProductionOverview from "../../assets/images/musicProduction2.png";
+import pianoOverview from "../../assets/images/course-overview-keyboard.jpeg";
+import guitarOverview from "../../assets/images/course-overview-guitar.jpeg";
+import ukuleleOverview from "../../assets/images/course-overview-ukulele.jpeg";
+import musicProductionOverview from "../../assets/images/course-overview-production.jpeg";
 
 export const courses = {
   piano: {

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import NavBar from "../NavBar";
-import hero1 from "../../assets/images/image84.png";
+import hero from "../../assets/images/image84.png";
+
+import hero1 from "../../assets/images/landing-hero-img1.png";
 import hero2 from "../../assets/images/landing-hero-img2.png";
 import hero3 from "../../assets/images/landing-hero-img3.png";
 import hero4 from "../../assets/images/landing-hero-img4.png";
@@ -13,6 +15,7 @@ export default function HeroSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const navigate = useNavigate();
   const delay = 5000; // Duration for each slide
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -22,11 +25,24 @@ export default function HeroSection() {
     return () => clearInterval(intervalId); // Clean up the interval on component unmount
   }, []);
 
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+
+    window.addEventListener("resize", checkScreenSize);
+
+    // Check screen size immediately
+    checkScreenSize();
+
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
   return (
     <section
       className="relative w-full h-screen overflow-hidden bg-cover bg-center transition-all ease-in-out duration-1000"
       style={{
-        backgroundImage: `url(${images[currentIndex]})`,
+        backgroundImage: `url(${isMobile && currentIndex === 0 ? hero : images[currentIndex]})`,
       }}
     >
       <NavBar />
@@ -48,7 +64,7 @@ export default function HeroSection() {
         </p>
         <div className="mt-6 flex gap-4">
           <button
-            onClick={() => navigate("/book-demo")}
+            onClick={() => navigate("/book-demo/choose-role")}
             className="bg-gradient-to-r from-custom-purple-1 via-custom-purple-2 to-custom-purple-3 hover:from-[#441162] hover:via-[#7200b4]  hover:to-[#b12bff] text-white py-3 px-6 text-xl rounded-2xl"
           >
             Book Free Trial

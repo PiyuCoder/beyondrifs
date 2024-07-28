@@ -1,12 +1,11 @@
-import React from 'react'
+import React from "react";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import StarryBackground from '../StarryBackground';
-
+import StarryBackground from "../StarryBackground";
 
 function BookTrail() {
   return (
     <section className="w-full h-auto z-0 relative py-14 sm:py-40 px-7 mt-20">
-        <StarryBackground />
+      <StarryBackground />
       <div className=" absolute left-0 top-0 w-full h-full bg-opacity-50 z-0" />
       <div className=" w-full h-full relative flex flex-col items-center justify-center z-20 text-center text-white gap-8">
         <h1 className="text-white text-2xl md:text-4xl lg:text-5xl font-semibold">
@@ -26,7 +25,7 @@ function BookTrail() {
         </button>
       </div>
     </section>
-  )
+  );
 }
 
-export default BookTrail
+export default BookTrail;

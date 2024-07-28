@@ -8,7 +8,7 @@ const StarryBackground = ({ landing }) => {
     const context = canvas.getContext("2d");
     const stars = [];
     const numStars = 60;
-    const maxStarSize = 1;
+    const maxStarSize = 1.5;
     const speed = 0.3;
 
     // Resize the canvas to full window size

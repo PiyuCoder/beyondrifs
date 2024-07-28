@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import piano from "../../assets/images/piano.png";
-import acoustic from "../../assets/images/acoustic.png";
-import vocal from "../../assets/images/vocal.png";
-import recording from "../../assets/images/recording.png";
-import eGuitar from "../../assets/images/e-guitar.png";
+import piano from "../../assets/images/keyboard.png";
+import guitar from "../../assets/images/guitar.png";
+import vocal from "../../assets/images/vocal-new.png";
+import recording from "../../assets/images/prod.png";
+import ukulele from "../../assets/images/ukulele.png";
 import "react-fancy-circular-carousel/FancyCarousel.css";
 import { IoArrowForwardSharp } from "react-icons/io5";
 import { IoArrowBackSharp } from "react-icons/io5";
@@ -11,7 +11,7 @@ import { IoArrowBackSharp } from "react-icons/io5";
 // Images
 const images = [
   {
-    image: acoustic,
+    image: ukulele,
     name: "Ukulele",
     content:
       "There is something about ukulele that just makes you smile. It makes you let your guard down. It brings out the child in all of us. So, why are you waiting? Learn from our esteemed instructors and discover the joy of creating beautiful music, fostering smiles and shared experiences for you and your loved ones.",
@@ -35,13 +35,13 @@ const images = [
       "Do you get curious about how music comes to life? or do you dream of becoming a top music producer? Stop at nothing to turn your passion into reality. Beyondriffs empowers aspiring producers like you. We'll guide you from the ground up, mastering software navigation and beat-making before diving into advanced techniques. Hone your skills and prepare to share your unique sound with the world.",
   },
   {
-    image: eGuitar,
+    image: guitar,
     name: "Guitar",
     content:
       "Whether you're dedicated to your musical practice or dreaming of rock stardom, our fellow mates in the musical world are here to support you. We start with basics like scales and chords, then progress steadily toward advanced levels. Our certified courses are tailored to meet each student's unique needs and abilities, ensuring a perfect match.",
   },
   {
-    image: acoustic,
+    image: ukulele,
     name: "Ukulele",
     content:
       "There is something about ukulele that just makes you smile. It makes you let your guard down. It brings out the child in all of us. So, why are you waiting? Learn from our esteemed instructors and discover the joy of creating beautiful music, fostering smiles and shared experiences for you and your loved ones.",
@@ -65,7 +65,7 @@ const images = [
       "Do you get curious about how music comes to life? or do you dream of becoming a top music producer? Stop at nothing to turn your passion into reality. Beyondriffs empowers aspiring producers like you. We'll guide you from the ground up, mastering software navigation and beat-making before diving into advanced techniques. Hone your skills and prepare to share your unique sound with the world.",
   },
   {
-    image: eGuitar,
+    image: guitar,
     name: "Guitar",
     content:
       "Whether you're dedicated to your musical practice or dreaming of rock stardom, our fellow mates in the musical world are here to support you. We start with basics like scales and chords, then progress steadily toward advanced levels. Our certified courses are tailored to meet each student's unique needs and abilities, ensuring a perfect match.",
@@ -121,10 +121,10 @@ const CircleCarousel = () => {
             <h1 className="text-3xl font-medium lg:mb-8 transition-all ease-linear duration-1000">
               {images[currentIndex].name}
             </h1>
-            <p className="font-thin tracking-wide text-lg">
+            <p className="font-thin tracking-wide text-lg h-40">
               {images[currentIndex].content}
             </p>
-            <div className="flex items-center justify-between lg:mt-20">
+            <div className="flex items-baseline justify-between lg:mt-20">
               <button
                 className="text-white text-xl flex items-center gap-3 hover:bg-stone-900 hover:text-purple-500 p-4 active:bg-opacity-10 active:scale-105 transition-all ease-in-out duration-300 rounded-xl mr-2"
                 onClick={prev}
@@ -179,7 +179,7 @@ const CircleCarousel = () => {
                 >
                   <img
                     className={`${
-                      index === currentIndex ? "lg:-mt-32 lg:ml-10" : ""
+                      index === currentIndex ? "lg:-mt-20 lg:ml-5" : ""
                     }`}
                     src={image.image}
                     alt={`carousel-item-${index}`}

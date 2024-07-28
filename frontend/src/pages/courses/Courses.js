@@ -21,21 +21,23 @@ export default function Courses() {
   return (
     <div className=" overflow-y-auto h-full w-full bg-black overflow-x-hidden no-scrollbar">
       <NavBar bgColor={"blak"} />
-      <TopSection course={course} />
-      <TrialDemo />
-      <Overview
-        overviewImg={course.overviewImg}
-        overviewContent={course.overviewContent}
-      />
-      <Highlights />
-      <Curriculum name={course.name} />
-      <Carousel3D />
-      <Certification />
-      <Advantages />
-      <ChoosePlan />
-      <CuriousMind />
-      <Trinity />
-      <Explore />
+      <div className="w-full h-full relative z-10">
+        <TopSection course={course} />
+        <TrialDemo />
+        <Overview
+          overviewImg={course.overviewImg}
+          overviewContent={course.overviewContent}
+        />
+        <Highlights />
+        <Curriculum name={course.name} />
+        <Carousel3D />
+        <Certification />
+        <Advantages />
+        <ChoosePlan />
+        <CuriousMind />
+        <Trinity />
+        <Explore />
+      </div>
     </div>
   );
 }

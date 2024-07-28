@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState } from "react";
 import { toast } from "react-toastify";
-import { axiosInstance } from "../api/axios";
+import { db } from "../api/firebaseConfig"; // Make sure this path is correct
+import { collection, addDoc } from "firebase/firestore";
 
 const demoContext = createContext();
 
@@ -33,9 +34,13 @@ export default function DemoContextProvider({ children }) {
   console.log(formData);
 
   const handleSubmit = async () => {
-    const response = await axiosInstance.post("/api/book-demo", { formData });
-    if (response.data.success) {
-      toast.success(response.data.message);
+    try {
+      const docRef = await addDoc(collection(db, "demo-bookings"), formData);
+      toast.success("Demo booked successfully!");
+
+      console.log(docRef);
+
+      // Reset form data after successful submission
       setFormData({
         name: "",
         email: "",
@@ -51,8 +56,12 @@ export default function DemoContextProvider({ children }) {
         },
         ageGroup: "",
       });
-      return { message: "success" };
-    } else toast.error(response.data.message);
+
+      return { success: true };
+    } catch (e) {
+      console.error("Error adding document: ", e);
+      toast.error("Failed to book demo.");
+    }
   };
 
   const handleSetError = (msg) => {
