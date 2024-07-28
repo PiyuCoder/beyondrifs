@@ -15,47 +15,44 @@ export default function Login() {
   const recaptchaWrapperRef = useRef(null);
   const appVerifier = useRef(null);
 
-  useEffect(() => {
-    initializeRecaptcha();
-    return () => {
-      if (appVerifier.current) {
-        appVerifier.current.clear();
-      }
-      if (recaptchaWrapperRef.current) {
-        recaptchaWrapperRef.current.innerHTML = "";
-      }
-    };
-  }, []);
+  // useEffect(() => {
+  //   initializeRecaptcha();
+  //   return () => {
+  //     if (appVerifier.current) {
+  //       appVerifier.current.clear();
+  //     }
+  //     if (recaptchaWrapperRef.current) {
+  //       recaptchaWrapperRef.current.innerHTML = "";
+  //     }
+  //   };
+  // }, []);
 
   const initializeRecaptcha = () => {
-    try {
-      if (!auth) {
-        console.error("Firebase auth object not found.");
-        return;
-      }
-
-      if (recaptchaWrapperRef.current) {
-        recaptchaWrapperRef.current.innerHTML = `<div id="recaptcha-container"></div>`;
-      }
-
-      appVerifier.current = new RecaptchaVerifier(auth, "recaptcha-container", {
-        size: "invisible",
-        callback: (response) => {
-          console.log("reCAPTCHA verified:", response);
-          // Optionally trigger OTP sending
-          // getOtp();
-        },
-        "expired-callback": () => {
-          console.warn("reCAPTCHA expired");
-        },
-      });
-
-      appVerifier.current.render().catch((err) => {
-        console.error("Error rendering reCAPTCHA:", err);
-      });
-    } catch (error) {
-      console.error("Error initializing reCAPTCHA:", error);
-    }
+    // try {
+    //   if (!auth) {
+    //     console.error("Firebase auth object not found.");
+    //     return;
+    //   }
+    //   if (recaptchaWrapperRef.current) {
+    //     recaptchaWrapperRef.current.innerHTML = `<div id="recaptcha-container"></div>`;
+    //   }
+    //   appVerifier.current = new RecaptchaVerifier(auth, "recaptcha-container", {
+    //     size: "invisible",
+    //     callback: (response) => {
+    //       console.log("reCAPTCHA verified:", response);
+    //       // Optionally trigger OTP sending
+    //       // getOtp();
+    //     },
+    //     "expired-callback": () => {
+    //       console.warn("reCAPTCHA expired");
+    //     },
+    //   });
+    //   appVerifier.current.render().catch((err) => {
+    //     console.error("Error rendering reCAPTCHA:", err);
+    //   });
+    // } catch (error) {
+    //   console.error("Error initializing reCAPTCHA:", error);
+    // }
   };
 
   const getOtp = async () => {

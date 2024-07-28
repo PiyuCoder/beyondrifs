@@ -23,13 +23,13 @@ export default function ChooseRole() {
     navigate("/book-demo/choose-time");
   };
   return (
-    <div className=" w-full h-full text-white text-center">
+    <div className=" w-full px-5 lg:px-0 h-full text-white text-center">
       <h1 className=" text-5xl font-semibold mb-4">Choose the Role</h1>
       <p className=" tracking-wider">Let us know who is attending the trial</p>
-      <div className=" flex justify-center items-center gap-24 my-6">
+      <div className=" flex justify-center items-center gap-20 md:gap-24 my-6">
         <div onClick={() => handleValueChange("role", "Student")}>
           <img
-            className=" rounded-full w-32 h-32 bg-black"
+            className=" rounded-full w-28 h-28 md:w-32 md:h-32 bg-black"
             src={studentImage}
             alt="Student"
           />
@@ -37,7 +37,7 @@ export default function ChooseRole() {
         </div>
         <div onClick={() => handleValueChange("role", "Tutor")}>
           <img
-            className=" rounded-full w-32 h-32 bg-black"
+            className=" rounded-full  w-28 h-28 md:w-32 md:h-32 bg-black"
             src={tutorImage}
             alt="Tutor"
           />
@@ -80,12 +80,12 @@ export default function ChooseRole() {
         </div>
         <div className=" text-start">
           <label className=" ">Select gender</label>
-          <div className="flex items-center justify-center gap-12 mt-2">
+          <div className="flex items-center justify-center gap-5 sm:gap-12 mt-2">
             {genders.map((g, i) => (
               <button
                 onClick={() => handleValueChange("gender", g)}
                 key={i}
-                className={`${g === formData.gender ? "bg-[#3E075D] border-t-[3px] border-l-[3px]" : " hover:bg-purple-800  hover:bg-opacity-20"} text-white border  flex-1  border-[#BB53F6] py-5 px-7 text-sm font-semibold tracking-wider rounded-2xl`}
+                className={`${g === formData.gender ? "bg-[#3E075D] border-t-[3px] border-l-[3px]" : " hover:bg-purple-800  hover:bg-opacity-20"} text-white border  flex-1  border-[#BB53F6] py-5 px-2 md:px-7 text-sm font-semibold tracking-wider rounded-2xl`}
               >
                 {g}
               </button>

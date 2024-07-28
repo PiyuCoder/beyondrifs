@@ -7,7 +7,7 @@ const StarryBackground = ({ landing }) => {
     const canvas = canvasRef.current;
     const context = canvas.getContext("2d");
     const stars = [];
-    const numStars = 60;
+    const numStars = 30;
     const maxStarSize = 1.5;
     const speed = 0.3;
 

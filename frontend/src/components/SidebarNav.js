@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import brLogo from "../assets/images/br-logo.png";
 import { navigationLinks } from "./constants/navData";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { IoIosArrowDown } from "react-icons/io";
 import { MdKeyboardArrowRight } from "react-icons/md";
@@ -11,6 +11,7 @@ export default function SidebarNav({ sidebarOpen, toggleSidebar }) {
   const [activeSubOptDropdown, setActiveSubOptDropdown] = useState(null);
   //   const [sidebarOpen, setSidebarOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const handleMouseOver = (index) => {
     setActiveDropdown(index);
@@ -147,7 +148,10 @@ export default function SidebarNav({ sidebarOpen, toggleSidebar }) {
             Login
           </button>
         </Link>
-        <button className="w-full bg-gradient-to-r from-custom-purple-1 via-custom-purple-2 to-custom-purple-3 text-white py-3 text-lg rounded-2xl hover:opacity-80">
+        <button
+          onClick={() => navigate("/book-demo/choose-role")}
+          className="w-full bg-gradient-to-r from-custom-purple-1 via-custom-purple-2 to-custom-purple-3 text-white py-3 text-lg rounded-2xl hover:opacity-80"
+        >
           Book free trial
         </button>
       </div>

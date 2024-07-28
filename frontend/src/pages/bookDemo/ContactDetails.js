@@ -12,6 +12,8 @@ export default function ContactDetails() {
       return handleSetError("Select an age group");
     } else if (!formData.email) {
       return handleSetError("Enter your email");
+    } else if (!formData.agreed) {
+      return handleSetError("Agree to the T&C");
     }
     const res = await handleSubmit();
 
@@ -19,8 +21,16 @@ export default function ContactDetails() {
 
     if (res.success) navigate("/");
   };
+
+  const handleCheckbox = (e) => {
+    if (e.target.checked) {
+      handleValueChange("agreed", true);
+    } else {
+      handleValueChange("agreed", false);
+    }
+  };
   return (
-    <div className="w-full h-full text-white text-center flex flex-col items-center justify-center">
+    <div className="w-full h-full px-5 lg:px-0 text-white text-center flex flex-col items-center justify-center">
       <h1 className="text-5xl font-semibold mb-4">Contact details</h1>
       <p className="tracking-wider mb-6">Enter all fields</p>
 
@@ -67,6 +77,8 @@ export default function ContactDetails() {
           <input
             type="checkbox"
             required
+            value={formData.agreed}
+            onChange={handleCheckbox}
             className="appearance-none h-5 w-5 border border-purple-600 bg-transparent checked:bg-purple-600 checked:border-transparent focus:outline-none cursor-pointer"
             id="terms"
           />

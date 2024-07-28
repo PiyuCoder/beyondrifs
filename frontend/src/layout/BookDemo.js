@@ -21,8 +21,8 @@ export default function BookDemo() {
   return (
     <div className="w-full h-full relative bg-page-not-found bg-cover bg-center py-10 md:p-10 lg:p-24 overflow-y-auto overflow-x-hidden no-scrollbar">
       <main className="backdrop-blur-lg bg-white bg-opacity-5 shadow-lg z-10 h-auto min-h-full rounded-3xl py-24 flex flex-col justify-center items-center">
-        <div className="flex justify-center gap-24 mb-8 relative ">
-          <hr className=" absolute border-dashed border-2  z-0 border-[#711CA0] w-[90%] top-1/4 left-0" />
+        <div className="flex justify-center gap-16 md:gap-24 mb-8 relative ">
+          <hr className=" absolute border-dashed border-2  z-0 border-[#711CA0] w-[80%] md:w-[90%] top-1/4 left-0" />
           {paths.map((path, index) => (
             <div
               className=" text-white z-10 flex flex-col items-center gap-4"

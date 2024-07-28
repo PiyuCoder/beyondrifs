@@ -65,13 +65,13 @@ export default function HeroSection() {
         <div className="mt-6 flex gap-4">
           <button
             onClick={() => navigate("/book-demo/choose-role")}
-            className="bg-gradient-to-r from-custom-purple-1 via-custom-purple-2 to-custom-purple-3 hover:from-[#441162] hover:via-[#7200b4]  hover:to-[#b12bff] text-white py-3 px-6 text-xl rounded-2xl"
+            className="bg-gradient-to-r from-custom-purple-1 via-custom-purple-2 to-custom-purple-3 hover:from-[#441162] hover:via-[#7200b4]  hover:to-[#b12bff] text-white py-3 px-3 md:px-6 text-lg md:text-xl rounded-2xl"
           >
             Book Free Trial
           </button>
           <button
             // onClick={() => navigate("/book-demo")}
-            className="border border-custom-purple-2 hover:bg-purple-800 hover:bg-opacity-20 text-white py-3 px-6 text-xl rounded-2xl"
+            className="border border-custom-purple-2 hover:bg-purple-800 hover:bg-opacity-20 text-white py-3 px-3 md:px-6 text-lg md:text-xl rounded-2xl"
           >
             Teach with us
           </button>

@@ -20,6 +20,7 @@ export default function DemoContextProvider({ children }) {
       shift: "",
     },
     ageGroup: "",
+    agreed: false,
   });
 
   const handleValueChange = (name, value) => {

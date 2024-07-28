@@ -22,6 +22,25 @@ const getTimeSlots = () => {
   return times;
 };
 
+const timeSlots = {
+  Morning: ["9:00", "9:30", "10:00", "11:00", "11:30"],
+  Evening: [
+    "12:00",
+    "12:30",
+    "1:00",
+    "1:30",
+    "2:00",
+    "2:30",
+    "3:00",
+    "3:30",
+    "4:00",
+    "4:30",
+    "5:00",
+    "5:30",
+    "6:00",
+  ],
+};
+
 const buttons = [
   {
     name: "Morning",
@@ -37,6 +56,7 @@ export default function ChooseTime() {
   const [startIndex, setStartIndex] = useState(0);
   const [selectedDay, setSelectedDay] = useState(null);
   const [selectedTime, setSelectedTime] = useState("");
+  const [selectedShift, setSelectedShift] = useState("Morning");
   const [prefix, setPrefix] = useState("AM");
   const navigate = useNavigate();
   const { handleTimeChange, handleSetError } = useDemoContext();
@@ -56,7 +76,7 @@ export default function ChooseTime() {
 
   const days = getNextDays(today, 30); // Let's assume we want to display dates for the next 30 days
   const visibleDays = days.slice(startIndex, startIndex + daysToShow);
-  const timeSlots = getTimeSlots();
+  // const timeSlots = getTimeSlots();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -79,7 +99,7 @@ export default function ChooseTime() {
   };
 
   return (
-    <div className="w-full h-full text-white text-center flex flex-col items-center justify-center">
+    <div className="w-full h-full px-5 lg:px-0 text-white text-center flex flex-col items-center justify-center">
       <h1 className="text-5xl font-semibold mb-4">Choose your time</h1>
       <p className="tracking-wider mb-6">
         Pick a time and date that works for you
@@ -122,7 +142,7 @@ export default function ChooseTime() {
 
         {selectedDay && (
           <div className="w-full text-center">
-            <div className=" flex items-center justify-between">
+            <div className=" flex flex-col md:flex-row items-center justify-between">
               <h2 className="text-xl mb-4">
                 {selectedDay && format(selectedDay, "EEEE")},{" "}
                 {selectedDay && format(selectedDay, "MMMM d")}{" "}
@@ -132,7 +152,10 @@ export default function ChooseTime() {
                 {buttons.map((btn, i) => (
                   <button
                     key={i}
-                    onClick={() => setPrefix(btn.prefix)}
+                    onClick={() => {
+                      setPrefix(btn.prefix);
+                      setSelectedShift(btn.name);
+                    }}
                     className={`p-2 rounded-2xl ${
                       btn.prefix === prefix
                         ? "bg-gradient-to-r from-custom-purple-1 via-custom-purple-2 to-custom-purple-3 hover:opacity-80"
@@ -145,7 +168,7 @@ export default function ChooseTime() {
               </div>
             </div>
             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4 mt-6">
-              {timeSlots.map((time, index) => (
+              {timeSlots[selectedShift].map((time, index) => (
                 <button
                   key={index}
                   onClick={() => setSelectedTime(time)}
@@ -164,13 +187,13 @@ export default function ChooseTime() {
         <div className="flex items-center justify-between  gap-5 w-full mt-7">
           <button
             onClick={() => navigate("/book-demo/choose-role")}
-            className="border border-custom-purple-2 hover:bg-purple-800 hover:bg-opacity-20 text-white  py-3 px-7 text-xl rounded-2xl hover:opacity-80"
+            className="border border-custom-purple-2 hover:bg-purple-800 hover:bg-opacity-20 text-white  py-3 px-2 sm:px-7 text-lg sm:text-xl rounded-2xl hover:opacity-80"
           >
             Previous
           </button>
           <button
             onClick={handleSubmit}
-            className="bg-gradient-to-r from-custom-purple-1 via-custom-purple-2 to-custom-purple-3 text-white  py-3 px-7 text-xl rounded-2xl hover:opacity-80"
+            className="bg-gradient-to-r from-custom-purple-1 via-custom-purple-2 to-custom-purple-3 text-white  py-3 px-2 sm:px-7 text-lg sm:text-xl rounded-2xl hover:opacity-80"
           >
             Enter contact details
           </button>
